@@ -526,26 +526,18 @@ p {
 
 /* ── Sobre resumo (Home) ─────────────────────────────────── */
 .about-home {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 4rem;
+  align-items: center;
 }
-
-.about-home-img,
-.about-home-text {
-  flex: 1;
-}
-
 .about-home-img {
   position: relative;
 }
-
 .about-home-img .img-placeholder {
   width: 100%;
-  aspect-ratio: 4 / 5;
-  max-height: 520px;
+  aspect-ratio: 3/4;
   border-radius: var(--radius-lg);
-  display: block;
 }
 
 .about-home-img::before {
@@ -1100,6 +1092,7 @@ p {
 .servico-detalhe:last-child {
   border-bottom: none;
 }
+
 .servico-detalhe.reverse .servico-img {
   order: 2;
 }
@@ -1110,19 +1103,6 @@ p {
   width: 100%;
   aspect-ratio: 4/3;
   border-radius: var(--radius-md);
-  background: var(--bg-warm);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  color: var(--brown-light);
-  font-size: 0.82rem;
-}
-.servico-img .img-placeholder svg {
-  width: 40px;
-  height: 40px;
-  opacity: 0.45;
 }
 .servico-content .section-label {
   margin-bottom: 0.5rem;
@@ -1180,9 +1160,11 @@ p {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  .servico-detalhe.reverse .servico-img,
+  .servico-detalhe.reverse .servico-img {
+    order: 1;
+  }
   .servico-detalhe.reverse .servico-content {
-    order: unset;
+    order: 2;
   }
 }
 
