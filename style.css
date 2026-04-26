@@ -526,21 +526,26 @@ p {
 
 /* ── Sobre resumo (Home) ─────────────────────────────────── */
 .about-home {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  display: flex;
   align-items: center;
+  gap: 4rem;
 }
+
+.about-home-img,
+.about-home-text {
+  flex: 1;
+}
+
 .about-home-img {
   position: relative;
 }
+
 .about-home-img .img-placeholder {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  object-position: center;
-  display: block;
+  aspect-ratio: 4 / 5;
+  max-height: 520px;
   border-radius: var(--radius-lg);
+  display: block;
 }
 
 .about-home-img::before {
